@@ -1,22 +1,31 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 
-void Palindrome(char s[])
-{
-    int start = 0;
-    int end = strlen(s) - 1;
+// Function to check if a string is a palindrome
+bool is_palindrome(const char *str) {
+    int left = 0;
+    int right = strlen(str) - 1;
 
-    while (end > start) {
-        if (s[start++] != s[end--]) {
-            printf("%s is not a Palindrome \n", s);
-            return;
+    while (left < right) {
+        if (str[left] != str[right]) {
+            return false;
         }
+        left++;
+        right--;
     }
-    printf("%s is a Palindrome \n", s);
+
+    return true;
 }
 
-int main()
-{
-    Palindrome("abba");
+int main() {
+    const char *word = "abba";
+
+    if (is_palindrome(word)) {
+        printf("\"%s\" is a palindrome\n", word);
+    } else {
+        printf("\"%s\" is not a palindrome\n", word);
+    }
+
     return 0;
 }
