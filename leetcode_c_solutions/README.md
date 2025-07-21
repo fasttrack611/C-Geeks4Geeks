@@ -4,10 +4,10 @@ This repository contains C solutions to various LeetCode problems. The solutions
 
 ## Compilation and Execution
 
-To compile and run a specific solution, you can use a C compiler like GCC. For example, to compile the `two_sum.c` solution, you would run the following command in your terminal:
+To compile and run the array solutions, you can use a C compiler like GCC. Navigate to the `leetcode_c_solutions/array` directory and run the following command:
 
 ```bash
-gcc array/two_sum.c -o two_sum
+gcc main.c -o array_solutions
 ```
 
-This will create an executable file named `two_sum`. You can then run the executable to test the solution. Note that you will need to write your own `main` function to test the solutions, as the provided files only contain the solution functions themselves.
+This will create an executable file named `array_solutions`. You can then run the executable to test the array solutions.
