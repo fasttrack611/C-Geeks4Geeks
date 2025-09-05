@@ -2,9 +2,9 @@ Great! Let's dive deep into the **core concepts of static vs non-static variable
 
 ---
 
-## 🔍 Your Example Recap
+##  Your Example Recap
 
-```c
+
 #include <stdio.h>
 
 int main()
@@ -17,9 +17,7 @@ int main()
 
     return 0;
 }
-```
 
----
 
 ## 🧠 Core Concepts Explained
 
@@ -33,16 +31,15 @@ int main()
 - **Use Case**: Useful for preserving state across function calls.
 
 #### ✅ Example:
-```c
+
 void counter() {
     static int count = 0;
     count++;
     printf("Count: %d\n", count);
 }
-```
+
 Calling `counter()` multiple times will increment `count` each time.
 
----
 
 ### 2. **Non-static (Automatic) Variables**
 - **Storage Class**: Default (automatic)
@@ -51,13 +48,10 @@ Calling `counter()` multiple times will increment `count` each time.
 - **Scope**: Local to the block/function where declared.
 - **Use Case**: Temporary storage during function execution.
 
-#### ⚠️ Example:
-```c
+####  Example:
+
 int x;
 printf("%d", x); // Undefined behavior: x contains garbage
-```
-
----
 
 ### 3. **Comparison Table**
 
@@ -80,7 +74,7 @@ printf("%d", x); // Undefined behavior: x contains garbage
 
 ### ✅ Enhanced Version of Your Program
 
-```c
+
 #include <stdio.h>
 
 int main()
@@ -93,8 +87,6 @@ int main()
 
     return 0;
 }
-```
 
----
 
 Would you like to see how **static variables behave across multiple function calls**, or how they differ in **global vs local scope**? I can also show how this compares in **C++ or Python** if you're exploring other languages.
